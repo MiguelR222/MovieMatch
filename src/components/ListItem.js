@@ -14,19 +14,20 @@ const ListItem = ({ id, name, onPress}) => {
 const styles = StyleSheet.create({
   item: {
       borderRadius:30,
-        padding: 20,
+        padding: 10,
         marginVertical: 8,
         marginHorizontal: 16,
         flexDirection: "row",
         justifyContent: "space-around",
         alignItems: "center",
-        borderWidth: 5,
+        borderWidth: 1,
         backgroundColor: "indianred",
     },
     movieData: {
-        color: "white",
-        fontSize: 20,
-        justifyContent: "space-around",
+      color: "white",
+      fontWeight:'bold',
+      fontSize: 20,
+      justifyContent: "space-around",
     }
 
 })
