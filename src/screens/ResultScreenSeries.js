@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     backgroundColor: '#f0f0f0',
-    padding: 20, // Increase padding
+    padding: 20,
   },
   title: {
     alignSelf:'center',
@@ -49,20 +49,20 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.25)',
     textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 10,
-    marginBottom: 20, // Increase margin
+    marginBottom: 20, 
     fontFamily: 'Verdana',
   },
   text: {
     textAlign: 'justify',
     fontSize: 16,
-    marginBottom: 10, // Increase margin
+    marginBottom: 10, 
     width:340,
-    fontFamily: 'Arial', // Use consistent font
+    fontFamily: 'Arial', 
   },
   poster: {
     width: 300,
     height: 400,
-    marginTop: 20, // Increase margin
+    marginTop: 20, 
     alignSelf: 'center',
   },
 });
