@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, ActivityIndicator } from 'react-native';
 import useGetTvSeries from '../hooks/useGetTvSeries';
 
 const ResultScreenSeries = ({ route }) => {
@@ -7,7 +7,7 @@ const ResultScreenSeries = ({ route }) => {
   console.log(randomTvSeries)
 
   if (loading) {
-    return <Text>Loading...</Text>;
+    return  <ActivityIndicator size={'large'} color={'blue'} />;
   }
 
   if (error) {
@@ -18,9 +18,10 @@ const ResultScreenSeries = ({ route }) => {
     <View style={styles.container}>
       {randomTvSeries && (
         <View>
-          <Text style={styles.title}>Random TV Series:</Text>
-          <Text style={styles.text}>Name: {randomTvSeries.name}</Text>
-          <Text style={styles.text}>Overview: {randomTvSeries.overview}</Text>
+          <Text style={styles.title}>{randomTvSeries.name}</Text>
+          {randomTvSeries.overview && (
+            <Text style={styles.text}>Overview: {randomTvSeries.overview}</Text>
+          )}
           <Image
             source={{ uri: `https://image.tmdb.org/t/p/w500${randomTvSeries.poster_path}` }}
             style={styles.poster}
@@ -35,22 +36,34 @@ const ResultScreenSeries = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'flex-start',
+    backgroundColor: '#f0f0f0',
+    padding: 20, // Increase padding
   },
   title: {
-    fontSize: 20,
+    alignSelf:'center',
+    fontSize: 30, 
     fontWeight: 'bold',
-    marginBottom: 10,
+    color: '#007BFF', 
+    textShadowColor: 'rgba(0, 0, 0, 0.25)',
+    textShadowOffset: { width: -1, height: 1 },
+    textShadowRadius: 10,
+    marginBottom: 20, // Increase margin
+    fontFamily: 'Verdana',
   },
   text: {
+    textAlign: 'justify',
     fontSize: 16,
-    marginBottom: 5,
+    marginBottom: 10, // Increase margin
+    width:340,
+    fontFamily: 'Arial', // Use consistent font
   },
   poster: {
     width: 300,
     height: 400,
-    marginTop: 10,
+    marginTop: 20, // Increase margin
+    alignSelf: 'center',
   },
 });
 
