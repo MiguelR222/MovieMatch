@@ -1,10 +1,8 @@
 import React from "react";
-import { SafeAreaView, View, Text, StyleSheet, ImageBackground,StatusBar } from "react-native";
+import { SafeAreaView, View, Text, StyleSheet, ImageBackground} from "react-native";
 import MoviesButton from "../components/MoviesButton";
 import SeriesButton from "../components/SeriesButton";
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { useNavigation } from "@react-navigation/native";
+
 
 
 

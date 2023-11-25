@@ -1,8 +1,6 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, ActivityIndicator } from 'react-native';
 import useGetMovie from '../hooks/useGetMovie';
-import { Feather } from '@expo/vector-icons'
-import { ActivityIndicator } from 'react-native';
 
 const ResultScreenMovies = ({ route }) => {
   const { moviesList, randomMovie, loading, error } = useGetMovie(route.params.selectedGenre);
@@ -19,9 +17,9 @@ const ResultScreenMovies = ({ route }) => {
   return (
     <View style={styles.container}>
       {randomMovie && (
-        <View>
+        <View style={styles.container}>
           <Text style={styles.title}>Random Movie:</Text>
-          <Text style={styles.text}>Name: {randomMovie.name}</Text>
+          <Text style={styles.text}>Title: {randomMovie.title}</Text>
           <Text style={styles.text}>Overview: {randomMovie.overview}</Text>
           <Image
             source={{ uri: `https://image.tmdb.org/t/p/w500${randomMovie.poster_path}` }}
@@ -35,9 +33,9 @@ const ResultScreenMovies = ({ route }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
+  container: { 
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
   },
   title: {
