@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Alert } from 'react-native';
 import { MOVIES_API_KEY } from '@env';
 
-const useGetTvSeries = () => {
+const useGetTvSeries = (selectedGenre) => {
   const [tvSeriesList, setTvSeriesList] = useState([]);
   const [randomTvSeries, setRandomTvSeries] = useState(null);
   const [loading, setLoading] = useState(true);
