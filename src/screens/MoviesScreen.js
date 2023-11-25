@@ -17,8 +17,6 @@ const MoviesScreen = ({ genres, navigation }) => {
     />
   );
 
-  console.log(selectedGenre);
-
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
@@ -37,7 +35,7 @@ const MoviesScreen = ({ genres, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'powderblue',
+    backgroundColor: '#ebedf2',
   },
   selectedItem: {
     flex: 1,
