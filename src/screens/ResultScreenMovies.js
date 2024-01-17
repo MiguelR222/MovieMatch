@@ -4,7 +4,6 @@ import useGetMovie from '../hooks/useGetMovie';
 
 const ResultScreenMovies = ({ route }) => {
   const { moviesList, randomMovie, loading, error } = useGetMovie(route.params.selectedGenre);
-  console.log(randomMovie)
 
   if (loading) {
     return <ActivityIndicator size={'large'} color={'blue'} />

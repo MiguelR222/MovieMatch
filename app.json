@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "MovieMatch",
-    "slug": "MovieMatch",
+    "slug": "moviematch",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,16 +15,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.miguelr282.moviematch"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.miguelr282.moviematch"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0e2d7e13-e90f-4633-85d1-03e1e31092a1"
+      }
+    },
+    "owner": "miguelr282"
   }
 }

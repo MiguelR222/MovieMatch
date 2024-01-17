@@ -4,7 +4,6 @@ import useGetTvSeries from '../hooks/useGetTvSeries';
 
 const ResultScreenSeries = ({ route }) => {
   const { tvSeriesList, randomTvSeries, loading, error } = useGetTvSeries(route.params.selectedGenre);
-  console.log(randomTvSeries)
 
   if (loading) {
     return  <ActivityIndicator size={'large'} color={'blue'} />;
